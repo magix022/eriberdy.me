@@ -42,7 +42,7 @@ export const Project = defineDocumentType(() => ({
 		repository: {
 			type: "string",
 		},
-		type: {
+		topic: {
 			type: "string",
 		},
 	},
