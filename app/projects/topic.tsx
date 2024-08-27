@@ -9,19 +9,35 @@ import { Eye } from "lucide-react";
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
-
+const featured_lists: Record<string, { featured: string; top2: string; top3: string; }> = {
+    "competition": {
+        featured: "unkey",
+        top2: "planetfall",
+        top3: "highstorm",
+    },
+    "personal": {
+        featured: "unkey",
+        top2: "planetfall",
+        top3: "highstorm",
+    },
+    "professional": {
+        featured: "unkey",
+        top2: "planetfall",
+        top3: "highstorm",
+    },
+}
 
 type Props = {
     views: Record<string, number>;
-    };
+};
 
 export default function Topic({ views }: Props) {
 
     const [topic, setTopic] = React.useState("competition");
 
-    const featured = allProjects.find((project) => project.slug === "unkey")!;
-    const top2 = allProjects.find((project) => project.slug === "planetfall")!;
-    const top3 = allProjects.find((project) => project.slug === "highstorm")!;
+    const featured = allProjects.find((project) => project.slug === featured_lists[topic].featured)!;
+    const top2 = allProjects.find((project) => project.slug === featured_lists[topic].top2)!;
+    const top3 = allProjects.find((project) => project.slug === featured_lists[topic].top3)!;
     const sorted = allProjects
         .filter((p) => p.published)
         .filter(
