@@ -10,7 +10,7 @@ import {Tabs, Tab} from "@nextui-org/react"
 
 const featured_lists: Record<string, { featured: string; top2: string; top3: string; }> = {
     "competition": {
-        featured: "unkey",
+        featured: "CEC2023",
         top2: "planetfall",
         top3: "highstorm",
     },
