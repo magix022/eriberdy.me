@@ -1,13 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
+import React, { Key } from "react";
 import { allProjects } from "contentlayer/generated";
 import { Card } from "../components/card";
 import { Article } from "./article";
 import { Eye } from "lucide-react";
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
+import {Tabs, Tab} from "@nextui-org/react"
 
 const featured_lists: Record<string, { featured: string; top2: string; top3: string; }> = {
     "competition": {
@@ -35,6 +34,10 @@ export default function Topic({ views }: Props) {
 
     const [topic, setTopic] = React.useState("competition");
 
+    const handleSelectionChange = (key: Key) => {
+        setTopic(key as string);
+    }
+
     const featured = allProjects.find((project) => project.slug === featured_lists[topic].featured)!;
     const top2 = allProjects.find((project) => project.slug === featured_lists[topic].top2)!;
     const top3 = allProjects.find((project) => project.slug === featured_lists[topic].top3)!;
@@ -57,6 +60,11 @@ export default function Topic({ views }: Props) {
         
         <div className="mt-0">
             {/* TODO: Add tabs for a tailwind ui library */}
+            <Tabs className="mb-4" selectedKey={topic} onSelectionChange={handleSelectionChange}>
+                <Tab key="competition" title="Competitions"></Tab>
+                <Tab key="personal" title="Personal"></Tab>
+                <Tab key="professional" title="Professional"></Tab>
+            </Tabs>
             <div className="hidden w-full h-px md:block bg-zinc-800 mb-16" />
 
             <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
