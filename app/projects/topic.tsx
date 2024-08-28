@@ -19,7 +19,7 @@ const featured_lists: Record<string, { featured: string; top2: string; top3: str
         top2: "planetfall",
         top3: "highstorm",
     },
-    "professional": {
+    "school": {
         featured: "unkey",
         top2: "planetfall",
         top3: "highstorm",
@@ -63,7 +63,7 @@ export default function Topic({ views }: Props) {
             <Tabs className="mb-4" selectedKey={topic} onSelectionChange={handleSelectionChange}>
                 <Tab key="competition" title="Competitions"></Tab>
                 <Tab key="personal" title="Personal"></Tab>
-                <Tab key="professional" title="Professional"></Tab>
+                <Tab key="school" title="School"></Tab>
             </Tabs>
             <div className="hidden w-full h-px md:block bg-zinc-800 mb-16" />
 
