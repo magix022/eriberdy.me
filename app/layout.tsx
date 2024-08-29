@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
   description: "Co-founder of Smartess and software engineer",
   openGraph: {
-    title: "chronark.com",
+    title: "eriberdy.me",
     description:
       "Co-founder of Smartess and software engineer",
     url: "https://eriberdy.me",
@@ -37,10 +37,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  twitter: {
-    title: "Chronark",
-    card: "summary_large_image",
   },
   icons: {
     shortcut: "/favicon.png",
