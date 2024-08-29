@@ -20,9 +20,9 @@ const featured_lists: Record<string, { featured: string; top2: string; top3: str
         top3: "eriberdy.me",
     },
     "school": {
-        featured: "unkey",
-        top2: "planetfall",
-        top3: "highstorm",
+        featured: "COMP551",
+        top2: "COMP424",
+        top3: "ECSE415",
     },
 }
 

@@ -42,7 +42,7 @@ export default function Home() {
             className="underline duration-500 hover:text-zinc-300"
           >
             Smartess
-          </Link> to provide smart living at scale.
+          </Link> to build a smarter future for residential communities.
         </h2>
       </div>
     </div>
