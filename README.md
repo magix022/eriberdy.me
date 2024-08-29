@@ -1,5 +1,5 @@
 <div align="center">
-    <a href="https://eriberdy.me"><h1 align="center">chronark.com</h1></a>
+    <a href="https://eriberdy.me"><h1 align="center">eriberdy.me</h1></a>
 
 My personal website, built with [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), [Upstash](https://upstash.com?ref=chronark.com), [Contentlayer](https://www.contentlayer.dev/) based on [@chronark](https://github.com/chronark) amazing website template.
 
