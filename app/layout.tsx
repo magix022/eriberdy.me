@@ -2,7 +2,7 @@ import "../global.css";
 import { Inter } from "@next/font/google";
 import LocalFont from "@next/font/local";
 import { Metadata } from "next";
-import { Analytics } from "./components/analytics";
+import { Analytics } from '@vercel/analytics/react';
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {
@@ -60,7 +60,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={[inter.variable, calSans.variable, 'dark'].join(" ")}>
       <head>
-        <Analytics />
       </head>
       <body
         className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
@@ -68,6 +67,7 @@ export default function RootLayout({
       >
         <Providers>
           {children}
+          <Analytics />
         </Providers>
       </body>
     </html>
